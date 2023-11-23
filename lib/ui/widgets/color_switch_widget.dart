@@ -1,4 +1,6 @@
+import 'package:f_simple_getx_template/ui/controllers/controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ColorSwitchWidget extends StatelessWidget {
   const ColorSwitchWidget({
@@ -7,12 +9,13 @@ class ColorSwitchWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MyController controller = Get.find();
     return Expanded(
       child: Align(
         child: ElevatedButton(
             key: const Key('ColorButton'),
             onPressed: () {
-              // here we create the event
+              controller.changeColor();
             },
             child: const Text('Change color (create event)')),
       ),

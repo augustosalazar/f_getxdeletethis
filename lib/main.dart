@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:loggy/loggy.dart';
+import 'ui/controllers/controller.dart';
 import 'ui/pages/home.dart';
 
 void main() {
@@ -10,6 +12,7 @@ void main() {
   );
 
   // Here we create the instance of the controller and add it to the DI
+  Get.put(MyController());
 
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
